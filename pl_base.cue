@@ -6,8 +6,11 @@ _base: {
 	kubernetes: {}
 }
 
-namespace: [Name=_]: _base & {
+namespace: [Name=_]: {
     metadata: {
         name: string | *Name
+        labels: {
+            name: Name
+        }
     }
 }
